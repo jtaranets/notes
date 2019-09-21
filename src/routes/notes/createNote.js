@@ -1,6 +1,7 @@
 const Note = require("../../modules/schemas/noteSchema");
 
 const saveNote = ((req, res) => {
+    console.log(req.body);
     const body = req.body;
 const noteToDB = new Note(body);
 noteToDB.save().then(() => {
